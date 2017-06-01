@@ -29,16 +29,16 @@
 ---
 ### Simple
 
+==random(type, count, options)==
 ```
-const bounds = { bbox: [-70, 40, -60, 60] };
-const points = turf.random('points', 2, bounds);
-```
-
-```
-{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[-66.94504782528124,42.132989199022866]},"properties":{}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-66.92306456151323,51.197396319622754]},"properties":{}}]}
+const points = turf.random('points', 2, { bbox: [-122.3401, 47.5993, -122.3089, 47.6163] });
 ```
 
-[Random Points](https://blue-basement.glitch.me/)
+Results
+
+```
+{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[-122.33333206790134,47.61235696404421]},"properties":{}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-122.32510703154492,47.60679435175362]},"properties":{}}]}
+```
 
 ---
 ### Fast
@@ -52,6 +52,9 @@ const points = turf.random('points', 2, bounds);
 
 ---
 # Example 1
+
+https://blue-basement.glitch.me/
+
 ---
 # Example 2
 ---
