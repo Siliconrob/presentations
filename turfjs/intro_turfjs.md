@@ -25,9 +25,49 @@
 	- NPM module - ```npm install @turf/turf```
     - Live link - ```https://npmcdn.com/@turf/turf/turf.min.js```
 * Customizable build options available  
+* Majority of operations work with [GeoJSON](http://geojson.org/)
 
 ---
 ### Simple
+
+* The majority of functions are GeoJSON input/output -- Add more here
+
+---
+# Walkthrough
+
+GeoJSON constructors
+* Point
+* Line
+* Polygon
+* Feature Collection
+
+---
+# Common Functions
+* Aggregation - Explain, example
+* Measurement - Explain, example
+* Transformation - Explain, example
+* Data methods - Explain, example
+* Interpolation - Explain, example
+* Join - Explain, example
+* Classification - Explain, example
+
+---
+### Fast
+
+* Local processed, client or server
+* Speed test results
+
+---
+
+### Modular
+
+* Example of single component build piece say random
+
+---
+# How do I use it?
+
+---
+# Example 1
 
 ==random(type, count, options)==
 ```
@@ -41,17 +81,7 @@ Results
 ```
 
 ---
-### Fast
-
----
-
-### Modular
-
----
-# How do I use it?
-
----
-# Example 1
+# Everyone try and share
 
 https://blue-basement.glitch.me/
 
