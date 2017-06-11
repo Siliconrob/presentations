@@ -8,29 +8,129 @@
 
 # ==ME==
 
-## :boom: Write software :boom:
+### :boom: Write software :boom:
 
-## Trying to learn and improve :thumbsup:
+### Trying to learn and improve :thumbsup:
 
-## <siliconrob@siliconheaven.net> :mailbox_with_mail:
-
----
-# What is it?
+### <siliconrob@siliconheaven.net> :mailbox_with_mail:
 
 ---
+## ==Not this==
+
+![](C:\Projects\presentations\turfjs\img\not_turf.png)
+
+---
+
+![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)
+![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)
+![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)
+![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)
+
+---
+## What is it?
+	Version 4.4 Released 2017-06-05, 77+ modules
+
 * Lightweight JavaScript geospatial library
 * Created by [Morgan Herlocker](https://twitter.com/morganherlocker)
-* Open Source - MIT License
+	* [Denis Carriere](https://github.com/DenisCarriere) - Active lead contributor
+	* Actively maintained - 56+ contributors
+![](C:\Projects\presentations\turfjs\img\turfjs-github.PNG)	
+* Open Source - :heart: MIT License :heart:
+
+---
+## What is it?
 * Complete engine vailable as
 	- NPM module - ```npm install @turf/turf```
     - Live link - ```https://npmcdn.com/@turf/turf/turf.min.js```
 * Customizable build options available  
 * Majority of operations work with [GeoJSON](http://geojson.org/)
+---
+## GeoJSON
+==Geo==graphic ==J==ava==S==cript ==O==bject ==N==otation
+	* Superset of JSON
+	![](C:\Projects\presentations\turfjs\img\geojson.png)
+
+[Details, details, details](https://macwright.org/2015/03/23/geojson-second-bite.html) and [RFC 7946](https://tools.ietf.org/html/rfc7946)
 
 ---
-### Simple
+## GeoJSON - Common types
+Point
+LineString
+Polygon
+MultiPoint
+MultiLineString
+MultiPolygon
+GeometryCollection
+Feature
+FeatureCollection
 
-* The majority of functions are GeoJSON input/output -- Add more here
+---
+## ==Example==
+
+```
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-122.3321, 47.6062]
+  },
+  "properties": {
+    "name": "Seattle"
+  }
+}
+```
+Build your own if you would like [geojson.io](http://geojson.io)
+
+---
+## Project Goals
+* Simple - Operations independent functions
+	* :earth_africa: -> ==TurfJS Function== -> :earth_americas:
+	* Majority of functions work with GeoJSON
+* Fast
+	* Benchmark code available in each function folder - Example [turf-centroid](https://github.com/Turfjs/turf/tree/master/packages/turf-centroid/bench.js)
+* Modular
+	* Functions are organized as complete units - examples, types, tests, etc
+
+---
+## Common Functions
+* Aggregation - turf-average, turf-area, turf-aggregate
+
+
+---
+## Common Functions
+* Measurement - Explain, example
+
+turf-distance
+
+---
+## Common Functions
+* Transformation - Explain, example
+
+turf-intersect, turf-explode
+
+---
+## Common Functions
+* Data methods - Explain, example
+
+turf-filter
+
+---
+## Common Functions
+* Interpolation - Explain, example
+
+turf-isobands, turf-point-on-line
+
+---
+## Common Functions
+* Join - Explain, example
+
+turf-within, turf-tin
+
+---
+## Common Functions
+* Classification - Explain, example
+
+turf-reclass
 
 ---
 # Walkthrough
@@ -40,16 +140,6 @@ GeoJSON constructors
 * Line
 * Polygon
 * Feature Collection
-
----
-# Common Functions
-* Aggregation - Explain, example
-* Measurement - Explain, example
-* Transformation - Explain, example
-* Data methods - Explain, example
-* Interpolation - Explain, example
-* Join - Explain, example
-* Classification - Explain, example
 
 ---
 ### Fast
