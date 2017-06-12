@@ -1,0 +1,18 @@
+## ==Common Functions==
+* Aggregation
+turf-average, turf-area, turf-aggregate, etc.
+* Measurement
+turf-distance
+* Transformation - Explain, example
+turf-intersect, turf-explode
+* Data methods - Explain, example
+turf-filter
+* Interpolation - Explain, example
+turf-isobands, turf-point-on-line
+* Join - Explain, example
+turf-within, turf-tin
+* Classification - Explain, example
+turf-reclass
+
+
+

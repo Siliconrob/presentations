@@ -27,45 +27,57 @@
 ![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)
 
 ---
-## What is it?
+## ==What is it?==
 	Version 4.4 Released 2017-06-05, 77+ modules
 
-* Lightweight JavaScript geospatial library
+* ==Lightweight== JavaScript geospatial library
 * Created by [Morgan Herlocker](https://twitter.com/morganherlocker)
 	* [Denis Carriere](https://github.com/DenisCarriere) - Active lead contributor
 	* Actively maintained - 56+ contributors
 ![](C:\Projects\presentations\turfjs\img\turfjs-github.PNG)	
-* Open Source - :heart: MIT License :heart:
+* ==Open Source== - :heart: MIT License :heart:
 
 ---
-## What is it?
-* Complete engine vailable as
+## ==What is it?==
+* ==Complete== engine available as
 	- NPM module - ```npm install @turf/turf```
     - Live link - ```https://npmcdn.com/@turf/turf/turf.min.js```
-* Customizable build options available  
-* Majority of operations work with [GeoJSON](http://geojson.org/)
+* ==Customizable== build options available  
+* ==Majority== of operations work with [GeoJSON](http://geojson.org/)
+
 ---
-## GeoJSON
+## ==TurfJS Goals==
+* ==Simple== - Operations as independent functions
+	* :earth_africa: -> ==TurfJS Function== -> :earth_americas:
+	* Majority of functions work with GeoJSON
+* ==Fast==
+	* Benchmark code available in each function folder - Example [turf-centroid](https://github.com/Turfjs/turf/tree/master/packages/turf-centroid/bench.js)
+* ==Modular==
+	* Functions are organized as complete units - examples, types, tests, etc
+
+---
+## ==Implementation Notes==
+
+* ==JavaScript== - Language of the modern web
+	* Isomorphic - Code is the same server/client pick best location based on data
+* ==Respect== your data
+	* GeoJSON datasets are often large if you need speed use the Node library on the server
+* ==Understand== your client and environments
+	* Browsers, Web Servers, Connectivity
+---
+## ==GeoJSON==
 ==Geo==graphic ==J==ava==S==cript ==O==bject ==N==otation
-	* Superset of JSON
-	![](C:\Projects\presentations\turfjs\img\geojson.png)
+
+* Superset of JSON
+![](C:\Projects\presentations\turfjs\img\geojson.png)
+
 
 [Details, details, details](https://macwright.org/2015/03/23/geojson-second-bite.html) and [RFC 7946](https://tools.ietf.org/html/rfc7946)
 
 ---
-## GeoJSON - Common types
-Point
-LineString
-Polygon
-MultiPoint
-MultiLineString
-MultiPolygon
-GeometryCollection
-Feature
-FeatureCollection
-
----
 ## ==Example==
+
+[Seattle City Center](https://github.com/Siliconrob/presentations/blob/master/turfjs/data/seattle.geojson) - Renders from GitHub
 
 ```
 {
@@ -79,105 +91,173 @@ FeatureCollection
   }
 }
 ```
-Build your own if you would like [geojson.io](http://geojson.io)
+
+Build your own tool [geojson.io](http://geojson.io)
 
 ---
-## Project Goals
-* Simple - Operations independent functions
-	* :earth_africa: -> ==TurfJS Function== -> :earth_americas:
-	* Majority of functions work with GeoJSON
-* Fast
-	* Benchmark code available in each function folder - Example [turf-centroid](https://github.com/Turfjs/turf/tree/master/packages/turf-centroid/bench.js)
-* Modular
-	* Functions are organized as complete units - examples, types, tests, etc
+## ==GeoJSON==
+
+## Common types from turf-helpers
+```    
+Point, Polygon, LineString, FeatureCollection,
+Feature, MultiLineString, MultiPoint,
+MultiPolygon, GeometryCollection
+```
+
+Format
+```
+const result = turf.[theType](
+[coordinates],
+[properties]);
+```
 
 ---
-## Common Functions
-* Aggregation - turf-average, turf-area, turf-aggregate
+## ==GeoJSON==
+    
+==Point== Example
+```
+const point = turf.point(
+[-122.3321, 47.6062],
+{ name: 'Seattle' });
+```
+
+Creates a point at coordinates [==latitude==, ==longitude==] with a name attribute of '==Seattle=='
+
+[Example](https://siliconrob.github.io/github-web/turfjs/turf-point.html)
+
+---
+## ==GeoJSON - Common types==
+LineString
+```
+const line = turf.lineString([
+  [-122.3321, 47.6062], [-122.3321, 47.8062]
+], { name: 'Seattle Line' });
+```
+
+Creates a point at coordinates [==latitude==, ==longitude==] with a name attribute of '==Seattle Line=='
+
+[Example](https://siliconrob.github.io/github-web/turfjs/turf-lineString.html)
+
+---
+## ==GeoJSON - Common types==
+Polygon
+```
+const poly = turf.polygon([
+  [
+    [-122.38,47.57], [-122.28,47.57],
+    [-122.28,47.62], [-122.38,47.62],
+    [-122.38,47.57]
+  ]
+], { name: 'Seattle Box' });
+```
+
+[Example](https://siliconrob.github.io/github-web/turfjs/turf-polygon.html)
 
 
 ---
-## Common Functions
-* Measurement - Explain, example
+## ==GeoJSON - Common types==
+FeatureCollection
 
-turf-distance
+```
+const fc = turf.featureCollection([
+  turf.point([-122.33136, 47.59909], {name: 'Seattle'}),
+  turf.polygon(
+  [
+   [
+    [-122.38,47.57], [-122.28,47.57],
+    [-122.28,47.62], [-122.38,47.62],
+    [-122.38,47.57]
+   ]
+  ], { name: 'Seattle Box' })
+]);	
+```
 
----
-## Common Functions
-* Transformation - Explain, example
+[Example](https://siliconrob.github.io/github-web/turfjs/turf-featureCollection.html)
 
-turf-intersect, turf-explode
-
----
-## Common Functions
-* Data methods - Explain, example
-
-turf-filter
-
----
-## Common Functions
-* Interpolation - Explain, example
-
-turf-isobands, turf-point-on-line
 
 ---
-## Common Functions
-* Join - Explain, example
+## ==GeoJSON==
 
-turf-within, turf-tin
-
----
-## Common Functions
-* Classification - Explain, example
-
-turf-reclass
-
----
-# Walkthrough
-
-GeoJSON constructors
-* Point
-* Line
-* Polygon
-* Feature Collection
-
----
-### Fast
-
-* Local processed, client or server
-* Speed test results
+Less common types you might use that are available
+* MultiPoint
+* MultiLineString
+* MultiPolygon
+* GeometryCollection
+* Feature
 
 ---
 
-### Modular
+## ==Common Functions==
+* Aggregation
+* Measurement
+* Transformation
+* Data methods
+* Interpolation
+* Join
+* Classification
+* Helpers
+---
 
-* Example of single component build piece say random
+## ==The List==
+
+[Current Packages](https://github.com/Turfjs/turf/tree/master/packages)
 
 ---
-# How do I use it?
-
----
-# Example 1
+# ==Walkthrough==
 
 ==random(type, count, options)==
 ```
-const points = turf.random('points', 2, { bbox: [-122.3401, 47.5993, -122.3089, 47.6163] });
+const points = turf.random('points', 2,
+{ bbox: [-122.3401, 47.5993, -122.3089, 47.6163] });
 ```
 
 Results
 
 ```
-{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[-122.33333206790134,47.61235696404421]},"properties":{}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-122.32510703154492,47.60679435175362]},"properties":{}}]}
+{"type":"FeatureCollection",
+"features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[-122.33333206790134,47.61235696404421]},"properties":{}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-122.32510703154492,47.60679435175362]},"properties":{}}]}
 ```
 
 ---
-# Everyone try and share
+# ==How==
 
-https://blue-basement.glitch.me/
+Glitch API example with a map and TurfJS
+
+:hatching_chick: https://blue-basement.glitch.me/ :hatching_chick:
 
 ---
-# Example 2
+# ==Remix Time==
+![](C:\Projects\presentations\turfjs\img\dj_bluray.jpg)
+
+To make your own copy use the ```Remix this in Glitch``` option at the bottom of the page
+
+Or collaborate with me on mine https://glitch.com/edit/#!/join/fad52299-6d48-47de-837b-3454041d3824
+
 ---
-# Example 3
+# ==How==
+Writing the turfjs code in the file ```myTurf.js```
+
+![](C:\Projects\presentations\turfjs\img\glitch_details.PNG)
+
+
 ---
+# ==What do you want to do?==
+
+* Explode :boom:
+* Buffers :white_square_button:
+* Distance :straight_ruler:
+* Union/Intersect :triangular_ruler:
+* Grids - square, triangle, hex :black_joker:
+* :smirk_cat: https://www.mapbox.com/blog/60-years-of-tornadoes-with-turf/
+
+---
+
+## Thanks to [MaptimeSEA](https://meetup.com/MaptimeSEA)
+![](C:\Projects\presentations\turfjs\img\maptimesea.png)
+
+Presentation https://github.com/Siliconrob/presentations/tree/master/turfjs
+
+Recommended local data source
+https://data.seattle.gov/
+
 
