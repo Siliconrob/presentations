@@ -17,14 +17,9 @@
 ---
 ## ==Not this==
 
-![](C:\Projects\presentations\turfjs\img\not_turf.png)
 
 ---
 
-![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)
-![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)
-![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)
-![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)![](C:\Projects\presentations\turfjs\img\turflogo.png)
 
 ---
 ## ==What is it?==
@@ -34,7 +29,6 @@
 * Created by [Morgan Herlocker](https://twitter.com/morganherlocker)
 	* [Denis Carriere](https://github.com/DenisCarriere) - Active lead contributor
 	* Actively maintained - 56+ contributors
-![](C:\Projects\presentations\turfjs\img\turfjs-github.PNG)	
 * ==Open Source== - :heart: MIT License :heart:
 
 ---
@@ -69,7 +63,6 @@
 ==Geo==graphic ==J==ava==S==cript ==O==bject ==N==otation
 
 * Superset of JSON
-![](C:\Projects\presentations\turfjs\img\geojson.png)
 
 
 [Details, details, details](https://macwright.org/2015/03/23/geojson-second-bite.html) and [RFC 7946](https://tools.ietf.org/html/rfc7946)
@@ -227,7 +220,6 @@ Glitch API example with a map and TurfJS
 
 ---
 # ==Remix Time==
-![](C:\Projects\presentations\turfjs\img\dj_bluray.jpg)
 
 To make your own copy use the ```Remix this in Glitch``` option at the bottom of the page
 
@@ -237,7 +229,6 @@ Or collaborate with me on mine https://glitch.com/edit/#!/join/fad52299-6d48-47d
 # ==How==
 Writing the turfjs code in the file ```myTurf.js```
 
-![](C:\Projects\presentations\turfjs\img\glitch_details.PNG)
 
 
 ---
@@ -253,7 +244,6 @@ Writing the turfjs code in the file ```myTurf.js```
 ---
 
 ## Thanks to [MaptimeSEA](https://meetup.com/MaptimeSEA)
-![](C:\Projects\presentations\turfjs\img\maptimesea.png)
 
 Presentation https://github.com/Siliconrob/presentations/tree/master/turfjs
 
