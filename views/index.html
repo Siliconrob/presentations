@@ -1,0 +1,70 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TurfJS - Sandbox</title>
+    <meta name="description" content="TurfJS things">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        TurfJS - simplify(feature, tolerance, highQuality);
+      </h1>      
+      <h3>
+        Reference API - <a target="_blank" href="http://turfjs.org/docs/#simplify">docs</a>
+      </h3>      
+    </header>
+
+    <main>
+      <p class="bold">Paste a GeoJSON feature</p>
+      <form>
+        <input type="text" id="inputGeoJSON" name="inputGeoJSON" placeholder="GeoJSON Feature Goes Here">
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    <div id="mapid"></div>      
+    <section class="results">
+      <ul id="results">
+      </ul>
+    </section>
+    <footer>
+      <a href="https://glitch.com">
+        Remix this in Glitch
+      </a>
+    </footer>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script>
+      // List of base tiles available
+      // http://wiki.openstreetmap.org/wiki/Tile_servers      
+      //const blackWhite = 'http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png';      
+      const tileUrl = 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';      
+      
+      window.theMap = L.map('mapid').setView([47.59909, -122.33136], 13);
+      L.tileLayer(tileUrl, {
+        maxZoom: 18,
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+          '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+      }).addTo(window.theMap);    
+    </script>    
+  </body>
+</html>
