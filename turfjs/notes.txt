@@ -1,3 +1,28 @@
+James Seppi - james.seppi@gmail.com
+github.com/jseppi
+
+(from Tom MacWright - macwright.org/presentations/turf-geodc)
+2000: Java Topology Suite (JTS)
+Gone
+
+2003: GEOS, JTS port to C++ - http://trac.osgeo.org/geos/
+GEOS - Geometry Engine, Open Source ¶
+FOSS4G International  August 14th - 18th 2017, Boston, MA, USA
+GEOS (Geometry Engine - Open Source) is a C++ port of the ?Java Topology Suite (JTS). As such, it aims to contain the complete functionality of JTS in C++. This includes all the ?OpenGIS Simple Features for SQL spatial predicate functions and spatial operators, as well as specific JTS enhanced topology functions.
+
+2008: Shapely, interface of GEOS to Python - http://toblerity.org/shapely/manual.html
+This document explains how to use the Shapely Python package for computational geometry.
+
+2011: JavaScript Topology Suite (JSTS), JTS port to JS - https://github.com/bjornharrtell/jsts
+
+JSTS is an ECMAScript 2015 library of spatial predicates and functions for processing geometry conforming to the Simple Features Specification for SQL published by the Open Geospatial Consortium. JSTS is also a port of the well established Java library JTS.
+
+The primary goal of the project is to provide web mapping applications with a complete library for processing and analyzing simple geometries but JSTS can also be used as a free standing geometry library.
+
+JSTS was made using automatic translation of the original JTS Java source via AST to AST transformation preserving the JTS API, except for the io related classes which has been selectively and manually ported with support for WKT, GeoJSON and OpenLayers.
+
+2014: Turf
+
 ## ==Common Functions==
 * Aggregation
 turf-average, turf-area, turf-aggregate, etc.

@@ -223,7 +223,7 @@ Results
 
 Glitch API example with a map and TurfJS
 
-:hatching_chick: https://blue-basement.glitch.me/ :hatching_chick:
+:hatching_chick: https://turfjs-random.glitch.me/ :hatching_chick:
 
 ---
 # ==Remix Time==
@@ -243,11 +243,11 @@ Writing the turfjs code in the file ```myTurf.js```
 ---
 # ==What do you want to do?==
 
-* Explode :boom:
-* Buffers :white_square_button:
-* Distance :straight_ruler:
-* Union/Intersect :triangular_ruler:
-* Grids - square, triangle, hex :black_joker:
+* Explode :boom: - https://turfjs-explode.glitch.me/
+* Buffers :white_square_button: - https://turfjs-buffer.glitch.me/
+* Simplify :wrench: - https://turfjs-simplify.glitch.me/
+* Union/Intersect :triangular_ruler: - https://turfjs-kinks.glitch.me/
+* Grids - square, triangle, hex :black_joker: - https://turfjs-grids.glitch.me/
 * :smirk_cat: https://www.mapbox.com/blog/60-years-of-tornadoes-with-turf/
 
 ---
