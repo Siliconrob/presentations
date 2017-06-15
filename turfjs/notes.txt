@@ -1,5 +1,4 @@
-James Seppi - james.seppi@gmail.com
-github.com/jseppi
+History Information from James Seppi - james.seppi@gmail.com
 
 (from Tom MacWright - macwright.org/presentations/turf-geodc)
 2000: Java Topology Suite (JTS)
@@ -22,6 +21,8 @@ The primary goal of the project is to provide web mapping applications with a co
 JSTS was made using automatic translation of the original JTS Java source via AST to AST transformation preserving the JTS API, except for the io related classes which has been selectively and manually ported with support for WKT, GeoJSON and OpenLayers.
 
 2014: Turf
+
+-------------
 
 ## ==Common Functions==
 * Aggregation

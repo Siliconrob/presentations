@@ -239,6 +239,12 @@ Writing the turfjs code in the file ```myTurf.js```
 
 ![](https://siliconrob.github.io/github-web/turfjs/img/glitch_details.PNG)
 
+---
+# ==How==
+Writing the turfjs code in the file ```myTurf.js```
+
+![](https://siliconrob.github.io/github-web/turfjs/img/glitch_reload_details.PNG)
+
 
 ---
 # ==What do you want to do?==
