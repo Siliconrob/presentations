@@ -12,7 +12,7 @@ Frictionless Development Framework
 
 - **Trying** to **learn** and **improve** :thumbsup:
 - **E-Mail**: <siliconrob@siliconheaven.net> :mailbox_with_mail:
-- **Blog**: https://siliconheaven.info/ 📋
+- **Blog**: https://siliconheaven.info/ :orange_book:
 - **GitHub**: https://github.com/Siliconrob ![](images/octocat.png)
 - I have worked with ServiceStack in production
 
@@ -63,8 +63,8 @@ Frictionless Development Framework
 # Guiding Principles
 - **Simplicity**: :one: + :one: = :two:
 - **Performance** as feature :rocket:
-- **Lightweight**: code first focus 🏋️
-- **Testability**: Unit, Integration, Application 🧪
+- **Lightweight**: code first focus :muscle:
+- **Testability**: Unit, Integration, Application :flashlight:
 - **Message** based architecture: Coming back to this later :arrows_counterclockwise:
 
 ---
@@ -84,15 +84,47 @@ https://docs.servicestack.net/release-notes-history
 - **Every input** request DTO has a **corresponding response** DTO
 
 ## Request/Response
-- Any DTO object -> serialized to Response ContentType
-- HttpResult, HttpError, CompressedResult (IHttpResult) for Customized HTTP response
+- Any DTO **object -> serialized** to Response ContentType DTO
+- **HttpResult**, **HttpError**, **CompressedResult** (IHttpResult) for **Customized HTTP** response
 
 ---
 
-# Messaging Example
-
+# WebAPI
+```
+// GET api/values
+[HttpGet]
+public ActionResult<IEnumerable<string>> Get()
+{
+	return new string[] { "value1", "value2" };
+}
 ```
 
+---
+# Messaging Example
+
+### ServiceStack
+```
+// Request DTO
+[Route("/api/values")]
+public class ValuesRequest : IReturn<ValuesResponse>
+{
+}
+
+// Response DTO (follows naming convention)
+public class ValuesResponse
+{
+    public List<string> Result { get; set; }
+
+    public ResponseStatus ResponseStatus { get; set; } //Automatic exception handling
+}
+
+public class ValuesService : Service
+{
+    public object All(ValuesRequest request)
+    {
+        return new ValuesResponse { Result = new string[] { "value1", "value2" } };
+    }
+}
 ```
 
 
